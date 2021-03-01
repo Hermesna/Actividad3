@@ -1,0 +1,24 @@
+@startuml Act3
+
+    class Tienda{
+        +CIF :int
+        +Ubicacion :string
+        +Nombre :string
+    }
+
+    Tienda "1" --> "*" Equipo
+    
+    class Equipo{
+            FechaAlquiler()
+            FechaDevolucion()
+    }
+
+    Cliente "1" --> Equipo
+
+    class Cliente{
+        +DNI :string
+        +Nombre :string
+        +Telefono :int
+    }
+
+@enduml
